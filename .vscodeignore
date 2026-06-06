@@ -1,0 +1,13 @@
+.vscode/**
+.claude/**
+node_modules/**
+icons/**
+build/**
+preview/**
+dist/**
+package-lock.json
+.gitignore
+.gitattributes
+**/*.map
+**/.eslintrc.json
+plan.md

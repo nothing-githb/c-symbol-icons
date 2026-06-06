@@ -1,0 +1,62 @@
+{
+  "fonts": [
+    {
+      "id": "c-cpp-icons",
+      "src": [
+        {
+          "path": "./fonts/c-cpp-icons.woff",
+          "format": "woff"
+        }
+      ],
+      "weight": "normal",
+      "style": "normal"
+    }
+  ],
+  "iconDefinitions": {
+    "symbol-class": {
+      "fontCharacter": "\\E000"
+    },
+    "symbol-constant": {
+      "fontCharacter": "\\E001"
+    },
+    "symbol-enum": {
+      "fontCharacter": "\\E002"
+    },
+    "symbol-enum-member": {
+      "fontCharacter": "\\E003"
+    },
+    "symbol-field": {
+      "fontCharacter": "\\E004"
+    },
+    "symbol-function": {
+      "fontCharacter": "\\E005"
+    },
+    "symbol-interface": {
+      "fontCharacter": "\\E006"
+    },
+    "symbol-method": {
+      "fontCharacter": "\\E007"
+    },
+    "symbol-module": {
+      "fontCharacter": "\\E008"
+    },
+    "symbol-namespace": {
+      "fontCharacter": "\\E009"
+    },
+    "symbol-operator": {
+      "fontCharacter": "\\E00A"
+    },
+    "symbol-property": {
+      "fontCharacter": "\\E00B"
+    },
+    "symbol-struct": {
+      "fontCharacter": "\\E00C"
+    },
+    "symbol-type-parameter": {
+      "fontCharacter": "\\E00D"
+    },
+    "symbol-variable": {
+      "fontCharacter": "\\E00E"
+    }
+  }
+}

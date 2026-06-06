@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>C/C++ Symbol Icons preview</title>
+<style>
+  body { background:#1e1e1e; color:#cccccc; font-family:Segoe UI, sans-serif; margin:0; padding:24px; }
+  h1 { font-size:16px; font-weight:600; }
+  .grid { display:grid; grid-template-columns:repeat(5,1fr); gap:18px; margin-top:18px; }
+  .cell { background:#252526; border:1px solid #333; border-radius:6px; padding:14px; text-align:center; }
+  .big img { width:48px; height:48px; }
+  .row { display:flex; align-items:center; justify-content:center; gap:6px; margin-top:10px; }
+  .row img { width:16px; height:16px; }
+  .name { margin-top:10px; font-size:12px; color:#9cdcfe; }
+  /* tint the black SVGs to a codicon-like foreground so they read on dark bg */
+  img { filter: invert(82%); }
+  .lbl { font-size:13px; color:#cccccc; }
+</style>
+</head>
+<body>
+<h1>C/C++ Symbol Icons — glyph preview (filter:invert simulates light foreground)</h1>
+<div class="grid" id="grid"></div>
+<script>
+  const icons = ["function","method","variable","constant","struct","class",
+    "field","property","enum","enum-member","namespace","interface",
+    "type-parameter","operator","module"];
+  const labels = {
+    "function":"function ()","method":"method (•)","variable":"variable tag",
+    "constant":"constant #","struct":"struct { }","class":"class C",
+    "field":"field ■","property":"property key","enum":"enum list",
+    "enum-member":"enum-member","namespace":"namespace ::","interface":"interface",
+    "type-parameter":"type-param <>","operator":"operator +","module":"module"
+  };
+  const g = document.getElementById("grid");
+  for (const n of icons) {
+    const src = "../icons/" + n + ".svg";
+    g.insertAdjacentHTML("beforeend",
+      `<div class="cell">
+         <div class="big"><img src="${src}"></div>
+         <div class="row"><span class="lbl">at 16px:</span><img src="${src}"><img src="${src}"><img src="${src}"></div>
+         <div class="name">${labels[n]}</div>
+       </div>`);
+  }
+</script>
+</body>
+</html>
