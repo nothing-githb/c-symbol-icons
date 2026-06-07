@@ -7,7 +7,7 @@ suggestion widget.
 
 Most symbol kinds share confusingly similar default glyphs. This theme gives each
 kind a clear **lowercase initial** (vectorised from Segoe UI) or an **idiomatic
-mark** (`#` for macros, `::` for namespaces), so you can scan a reference list by
+mark** (`#` for macros), so you can scan a reference list by
 glyph alone. Where your color theme defines symbol colors
 (`symbolIcon.*Foreground`), the glyphs are tinted automatically — functions
 purple, structs orange, variables blue, and so on.
@@ -23,9 +23,7 @@ purple, structs orange, variables blue, and so on.
 | `symbol-enum`           | `enum`                        | `e` |
 | `symbol-enum-member`    | enum constant                 | `ec` |
 | `symbol-constant` / `symbol-string` | `#define` macro / `const` | `#` |
-| `symbol-namespace`      | namespace / scope             | `::` |
-| `symbol-interface`      | abstract type                 | a UML lollipop |
-| `symbol-module`         | module / translation unit     | a package cube |
+| `symbol-module`         | translation unit              | a package cube |
 
 Any symbol kind not listed above keeps its default VS Code (Codicon) glyph.
 

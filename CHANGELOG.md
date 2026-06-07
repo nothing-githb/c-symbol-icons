@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.0.9
+
+- Removed the remaining non-C glyphs (they fall back to the default Codicons):
+  namespace and interface.
+
 ## 0.0.8
 
 - Renamed the package, theme id, and font/theme files to drop the old prefix:

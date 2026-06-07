@@ -28,20 +28,14 @@
     "symbol-function": {
       "fontCharacter": "\\E004"
     },
-    "symbol-interface": {
+    "symbol-module": {
       "fontCharacter": "\\E005"
     },
-    "symbol-module": {
+    "symbol-struct": {
       "fontCharacter": "\\E006"
     },
-    "symbol-namespace": {
-      "fontCharacter": "\\E007"
-    },
-    "symbol-struct": {
-      "fontCharacter": "\\E008"
-    },
     "symbol-variable": {
-      "fontCharacter": "\\E009"
+      "fontCharacter": "\\E007"
     },
     "symbol-string": {
       "fontCharacter": "\\E000"
