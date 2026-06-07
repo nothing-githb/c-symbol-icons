@@ -1,14 +1,21 @@
 # Change Log
 
+## 0.0.7
+
+- Renamed to **"C Icon Theme"** and narrowed the scope to C.
+- Removed the C++-specific glyphs (they fall back to the default Codicons):
+  method, class/typedef, template (type parameter), operator overload, property.
+- Fixed the `symbol-function` label (now just "function").
+
 ## 0.0.6
 
 - Initial release.
-- Product icon theme **"C/C++ Icon Theme"** that relabels symbol icons for C/C++:
+- Product icon theme that relabels symbol icons for C:
   - **Lowercase letter glyphs** (vectorised from Segoe UI at a fixed x-height for
-    natural proportions): `f` function, `m` method, `t` class/typedef, `v` variable,
-    `s` struct, `sf` field, `e` enum, `ec` enum constant, `p` property.
-  - **Idiomatic marks:** `#` macro/constant, `::` namespace, `<>` template,
-    `+` operator, lollipop interface, cube module.
+    natural proportions): `f` function, `v` variable, `s` struct, `sf` field,
+    `e` enum, `ec` enum constant.
+  - **Idiomatic marks:** `#` macro/constant, `::` namespace, lollipop interface,
+    cube module.
 - `#define` macros (reported as the String kind) are mapped to `#` via
   `symbol-string`.
 - Glyphs are single-color and tinted by the active color theme's

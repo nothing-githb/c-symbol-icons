@@ -1,8 +1,8 @@
 {
   "name": "c-cpp-symbol-icons",
-  "displayName": "C/C++ Icon Theme",
-  "description": "A product icon theme that labels C/C++ symbols with clear initials and idiomatic marks (f functions, m methods, t types, v variables, s structs, # macros, <> templates, :: namespaces) so they are easy to tell apart in Call Hierarchy, Find References, Symbol Search, Outline and Breadcrumbs.",
-  "version": "0.0.6",
+  "displayName": "C Icon Theme",
+  "description": "A product icon theme that labels C symbols with clear initials and idiomatic marks (f functions, v variables, s structs, e enums, sf fields, # macros) so they are easy to tell apart in Call Hierarchy, Find References, Symbol Search, Outline and Breadcrumbs.",
+  "version": "0.0.7",
   "publisher": "halistahasahin",
   "author": {
     "name": "Halis Taha Sahin"
@@ -16,8 +16,6 @@
   ],
   "keywords": [
     "c",
-    "c++",
-    "cpp",
     "codicon",
     "product icon theme",
     "symbol",
@@ -41,7 +39,7 @@
     "productIconThemes": [
       {
         "id": "c-cpp-symbols",
-        "label": "C/C++ Icon Theme",
+        "label": "C Icon Theme",
         "path": "./theme/c-cpp-product-icon-theme.json"
       }
     ]

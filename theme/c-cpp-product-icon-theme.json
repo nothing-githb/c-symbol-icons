@@ -13,53 +13,38 @@
     }
   ],
   "iconDefinitions": {
-    "symbol-class": {
+    "symbol-constant": {
       "fontCharacter": "\\E000"
     },
-    "symbol-constant": {
-      "fontCharacter": "\\E001"
-    },
     "symbol-enum": {
-      "fontCharacter": "\\E002"
+      "fontCharacter": "\\E001"
     },
     "symbol-enum-member": {
-      "fontCharacter": "\\E003"
+      "fontCharacter": "\\E002"
     },
     "symbol-field": {
-      "fontCharacter": "\\E004"
+      "fontCharacter": "\\E003"
     },
     "symbol-function": {
-      "fontCharacter": "\\E005"
+      "fontCharacter": "\\E004"
     },
     "symbol-interface": {
-      "fontCharacter": "\\E006"
-    },
-    "symbol-method": {
-      "fontCharacter": "\\E007"
+      "fontCharacter": "\\E005"
     },
     "symbol-module": {
-      "fontCharacter": "\\E008"
+      "fontCharacter": "\\E006"
     },
     "symbol-namespace": {
-      "fontCharacter": "\\E009"
-    },
-    "symbol-operator": {
-      "fontCharacter": "\\E00A"
-    },
-    "symbol-property": {
-      "fontCharacter": "\\E00B"
+      "fontCharacter": "\\E007"
     },
     "symbol-struct": {
-      "fontCharacter": "\\E00C"
-    },
-    "symbol-type-parameter": {
-      "fontCharacter": "\\E00D"
+      "fontCharacter": "\\E008"
     },
     "symbol-variable": {
-      "fontCharacter": "\\E00E"
+      "fontCharacter": "\\E009"
     },
     "symbol-string": {
-      "fontCharacter": "\\E001"
+      "fontCharacter": "\\E000"
     }
   }
 }

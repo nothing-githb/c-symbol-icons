@@ -21,12 +21,9 @@ const FONT = "C:/Windows/Fonts/segoeui.ttf"; // Segoe UI Regular (thinner letter
 
 // basename -> badge label (1-2 chars)
 const LETTERS = {
-  class: "t", // class and typedef share the symbol-class codicon -> both show 't'
-  method: "m",
   field: "sf", // struct field
   variable: "v",
   enum: "e",
-  property: "p",
   struct: "s",
   function: "f",
   "enum-member": "ec", // enum constant
