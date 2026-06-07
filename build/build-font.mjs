@@ -69,6 +69,18 @@ for (const n of names) {
   const hex = codepoints[n].toString(16).toUpperCase();
   iconDefinitions[`symbol-${n}`] = { fontCharacter: `\\${hex}` };
 }
+
+// Extra codicon ids that C/C++ language servers assign to constructs that have
+// no dedicated codicon, mapped (aliased) to the glyph of an existing icon file.
+//   <real codicon id> : <icon file basename whose glyph to reuse>
+const ALIASES = {
+  "symbol-string": "constant", // #define macros are reported as String -> show '#'
+};
+for (const [id, srcName] of Object.entries(ALIASES)) {
+  if (!(srcName in codepoints)) continue;
+  const hex = codepoints[srcName].toString(16).toUpperCase();
+  iconDefinitions[id] = { fontCharacter: `\\${hex}` };
+}
 const theme = {
   fonts: [
     {

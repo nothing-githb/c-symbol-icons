@@ -57,6 +57,9 @@
     },
     "symbol-variable": {
       "fontCharacter": "\\E00E"
+    },
+    "symbol-string": {
+      "fontCharacter": "\\E001"
     }
   }
 }

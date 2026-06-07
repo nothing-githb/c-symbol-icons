@@ -1,8 +1,8 @@
 {
   "name": "c-cpp-symbol-icons",
-  "displayName": "C/C++ Symbol Icons",
-  "description": "A product icon theme that gives C and C++ symbols distinct, idiomatic shapes (# macros, <T> templates, :: namespaces, () functions) so they are easy to tell apart in Call Hierarchy, Find References, Symbol Search, Outline and Breadcrumbs.",
-  "version": "0.0.1",
+  "displayName": "C/C++ Icon Theme",
+  "description": "A product icon theme that labels C/C++ symbols with clear initials and idiomatic marks (f functions, M methods, t types, V variables, S structs, # macros, <> templates, :: namespaces) so they are easy to tell apart in Call Hierarchy, Find References, Symbol Search, Outline and Breadcrumbs.",
+  "version": "0.0.5",
   "publisher": "halistahasahin",
   "author": {
     "name": "Halis Taha Sahin"
@@ -41,7 +41,7 @@
     "productIconThemes": [
       {
         "id": "c-cpp-symbols",
-        "label": "C/C++ Symbol Icons",
+        "label": "C/C++ Icon Theme",
         "path": "./theme/c-cpp-product-icon-theme.json"
       }
     ]
@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@vscode/vsce": "^3.9.2",
-    "fantasticon": "^3.0.0"
+    "fantasticon": "^3.0.0",
+    "opentype.js": "^2.0.0"
   }
 }
