@@ -17,14 +17,14 @@ purple, types orange, variables blue, and so on.
 | Symbol kind (codicon)   | C/C++ meaning                 | Glyph |
 |-------------------------|-------------------------------|-------|
 | `symbol-function`       | free function                 | `f` |
-| `symbol-method`         | member function               | `M` |
+| `symbol-method`         | member function               | `m` |
 | `symbol-class`          | class **and** `typedef`       | `t` |
-| `symbol-variable`       | variable                      | `V` |
-| `symbol-field`          | struct/class field            | `Sf` |
-| `symbol-struct`         | `struct`                      | `S` |
-| `symbol-enum`           | `enum`                        | `E` |
-| `symbol-enum-member`    | enum constant                 | `Ec` |
-| `symbol-property`       | property                      | `P` |
+| `symbol-variable`       | variable                      | `v` |
+| `symbol-field`          | struct/class field            | `sf` |
+| `symbol-struct`         | `struct`                      | `s` |
+| `symbol-enum`           | `enum`                        | `e` |
+| `symbol-enum-member`    | enum constant                 | `ec` |
+| `symbol-property`       | property                      | `p` |
 | `symbol-constant` / `symbol-string` | `#define` macro / `const` | `#` |
 | `symbol-namespace`      | `namespace`                   | `::` |
 | `symbol-interface`      | abstract type                 | a UML lollipop |
@@ -74,8 +74,8 @@ npm install
 npm run build      # icons/*.svg -> theme/fonts/c-cpp-icons.woff + the theme JSON
 ```
 
-- `build/gen-badges.mjs` vectorises the letter glyphs (`t`, `M`, `f`, `V`, `S`,
-  `Sf`, `E`, `Ec`, `P`) from Segoe UI into `icons/*.svg`.
+- `build/gen-badges.mjs` vectorises the lowercase letter glyphs (`t`, `m`, `f`,
+  `v`, `s`, `sf`, `e`, `ec`, `p`) from Segoe UI into `icons/*.svg`.
 - `build/build-font.mjs` assigns each icon a Private-Use-Area codepoint and rebuilds
   [`theme/fonts/c-cpp-icons.woff`](theme/fonts/c-cpp-icons.woff) and
   [`theme/c-cpp-product-icon-theme.json`](theme/c-cpp-product-icon-theme.json),

@@ -1,7 +1,8 @@
-// Generates JetBrains-style "letter badge" SVGs for the letter-logical symbol
-// kinds: a rounded square with the letter knocked out (fill-rule evenodd), so
-// the theme color fills the badge and the letter shows through as the kind's
-// initial. Letters are vectorised from Segoe UI Bold via opentype.js.
+// Generates filled lowercase letter SVGs for the letter-logical symbol kinds
+// (class/typedef t, method m, field sf, variable v, enum e, property p,
+// struct s, function f, enum-member ec). Letters are vectorised from Segoe UI
+// Regular via opentype.js at a fixed x-height so they keep natural typographic
+// proportions (ascenders tall, x-height letters short, descenders below).
 //
 // Run before build-font.mjs:
 //   .tools/node-v24.16.0-win-x64/node.exe build/gen-badges.mjs
@@ -21,33 +22,39 @@ const FONT = "C:/Windows/Fonts/segoeui.ttf"; // Segoe UI Regular (thinner letter
 // basename -> badge label (1-2 chars)
 const LETTERS = {
   class: "t", // class and typedef share the symbol-class codicon -> both show 't'
-  method: "M",
-  field: "Sf", // struct field
-  variable: "V",
-  enum: "E",
-  property: "P",
-  struct: "S",
+  method: "m",
+  field: "sf", // struct field
+  variable: "v",
+  enum: "e",
+  property: "p",
+  struct: "s",
   function: "f",
-  "enum-member": "Ec", // enum constant
+  "enum-member": "ec", // enum constant
 };
 
 const BOX = 24;
-const TARGET_H = 16.5; // label height inside the 24x24 box (no frame -> fill more)
-const TARGET_W = 19; // label width budget for 2-char labels
+const X_HEIGHT = 12; // lowercase x-height inside the 24x24 box (natural proportions)
+const MAX_W = 20; // width budget; wide 2-char labels (sf, ec) shrink to fit
+const BASELINE = BOX / 2 + X_HEIGHT / 2; // center the x-height band vertically
+
 const fontBuf = readFileSync(FONT);
 const font = opentype.parse(fontBuf.buffer.slice(fontBuf.byteOffset, fontBuf.byteOffset + fontBuf.byteLength));
 
 const n = (v) => Number(v.toFixed(2));
 
+// Fixed glyph scale: map the font's x-height to X_HEIGHT so every letter keeps
+// its natural proportions instead of being stretched to a uniform height.
+const xbb = font.getPath("x", 0, 0, 100).getBoundingBox();
+const FIXED_SIZE = (100 * X_HEIGHT) / (xbb.y2 - xbb.y1);
+
 function letterPath(letter) {
-  const p = font.getPath(letter, 0, 0, 20); // baseline at y=0, size 20
+  const p = font.getPath(letter, 0, BASELINE, FIXED_SIZE); // shared baseline
   const bb = p.getBoundingBox();
+  const w = bb.x2 - bb.x1;
+  const scale = w > MAX_W ? MAX_W / w : 1; // shrink only over-wide 2-char labels
   const cx = (bb.x1 + bb.x2) / 2;
-  const cy = (bb.y1 + bb.y2) / 2;
-  // Fit within both the height and width budgets (2-char labels are width-bound).
-  const scale = Math.min(TARGET_H / (bb.y2 - bb.y1), TARGET_W / (bb.x2 - bb.x1));
-  const tx = (X) => n((X - cx) * scale + BOX / 2);
-  const ty = (Y) => n((Y - cy) * scale + BOX / 2);
+  const tx = (X) => n((X - cx) * scale + BOX / 2); // center horizontally
+  const ty = (Y) => n((Y - BOX / 2) * scale + BOX / 2); // natural baseline (scale=1)
   let d = "";
   for (const c of p.commands) {
     if (c.type === "M") d += `M${tx(c.x)},${ty(c.y)}`;

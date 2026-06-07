@@ -1,8 +1,8 @@
 {
   "name": "c-cpp-symbol-icons",
   "displayName": "C/C++ Icon Theme",
-  "description": "A product icon theme that labels C/C++ symbols with clear initials and idiomatic marks (f functions, M methods, t types, V variables, S structs, # macros, <> templates, :: namespaces) so they are easy to tell apart in Call Hierarchy, Find References, Symbol Search, Outline and Breadcrumbs.",
-  "version": "0.0.5",
+  "description": "A product icon theme that labels C/C++ symbols with clear initials and idiomatic marks (f functions, m methods, t types, v variables, s structs, # macros, <> templates, :: namespaces) so they are easy to tell apart in Call Hierarchy, Find References, Symbol Search, Outline and Breadcrumbs.",
+  "version": "0.0.6",
   "publisher": "halistahasahin",
   "author": {
     "name": "Halis Taha Sahin"
