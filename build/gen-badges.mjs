@@ -17,7 +17,8 @@ const opentype = require("opentype.js");
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const iconsDir = join(root, "icons");
-const FONT = "C:/Windows/Fonts/segoeui.ttf"; // Segoe UI Regular (thinner letters)
+// Segoe UI Regular from the Windows fonts dir (no hard-coded drive path).
+const FONT = join(process.env.SystemRoot || "C:/Windows", "Fonts", "segoeui.ttf");
 
 // basename -> badge label (1-2 chars)
 const LETTERS = {
