@@ -1,5 +1,10 @@
 # Change Log
 
+## 0.0.10
+
+- Maintenance release. No icon or theme changes since 0.0.9; the build script now
+  resolves the Segoe UI font via `%SystemRoot%` instead of a hard-coded path.
+
 ## 0.0.9
 
 - Removed the remaining non-C glyphs (they fall back to the default Codicons):
