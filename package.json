@@ -2,7 +2,7 @@
   "name": "c-symbol-icons",
   "displayName": "C Icon Theme",
   "description": "A product icon theme that labels C symbols with clear initials and idiomatic marks (f functions, v variables, s structs, e enums, sf fields, # macros) so they are easy to tell apart in Call Hierarchy, Find References, Symbol Search, Outline and Breadcrumbs.",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "publisher": "halistahasahin",
   "author": {
     "name": "Halis Taha Sahin"

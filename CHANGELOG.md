@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.0.11
+
+- Restored the `t` glyph for **`typedef`** (via `symbol-class`, which is how C
+  language servers report typedefs). It had been dropped together with `class` in
+  0.0.7 because the two share the `symbol-class` codicon.
+
 ## 0.0.10
 
 - Maintenance release. No icon or theme changes since 0.0.9; the build script now

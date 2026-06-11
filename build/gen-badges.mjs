@@ -22,6 +22,7 @@ const FONT = join(process.env.SystemRoot || "C:/Windows", "Fonts", "segoeui.ttf"
 
 // basename -> badge label (1-2 chars)
 const LETTERS = {
+  class: "t", // symbol-class = typedef in C (C has no classes), so typedefs show 't'
   field: "sf", // struct field
   variable: "v",
   enum: "e",

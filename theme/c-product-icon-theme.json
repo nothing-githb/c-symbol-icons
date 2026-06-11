@@ -13,32 +13,35 @@
     }
   ],
   "iconDefinitions": {
-    "symbol-constant": {
+    "symbol-class": {
       "fontCharacter": "\\E000"
     },
-    "symbol-enum": {
+    "symbol-constant": {
       "fontCharacter": "\\E001"
     },
-    "symbol-enum-member": {
+    "symbol-enum": {
       "fontCharacter": "\\E002"
     },
-    "symbol-field": {
+    "symbol-enum-member": {
       "fontCharacter": "\\E003"
     },
-    "symbol-function": {
+    "symbol-field": {
       "fontCharacter": "\\E004"
     },
-    "symbol-module": {
+    "symbol-function": {
       "fontCharacter": "\\E005"
     },
-    "symbol-struct": {
+    "symbol-module": {
       "fontCharacter": "\\E006"
     },
-    "symbol-variable": {
+    "symbol-struct": {
       "fontCharacter": "\\E007"
     },
+    "symbol-variable": {
+      "fontCharacter": "\\E008"
+    },
     "symbol-string": {
-      "fontCharacter": "\\E000"
+      "fontCharacter": "\\E001"
     }
   }
 }

@@ -17,6 +17,7 @@ purple, structs orange, variables blue, and so on.
 | Symbol kind (codicon)   | C meaning                     | Glyph |
 |-------------------------|-------------------------------|-------|
 | `symbol-function`       | function                      | `f` |
+| `symbol-class`          | `typedef`                     | `t` |
 | `symbol-variable`       | variable                      | `v` |
 | `symbol-struct`         | `struct`                      | `s` |
 | `symbol-field`          | struct field                  | `sf` |
@@ -27,11 +28,14 @@ purple, structs orange, variables blue, and so on.
 
 Any symbol kind not listed above keeps its default VS Code (Codicon) glyph.
 
-### Note on macros
+### Notes on a couple of mappings
 
-Some C language servers report `#define` macros as the *String* kind, so
-`symbol-string` is mapped to `#` as well (this also affects string symbols in other
-languages, since product icon themes are global).
+- **typedef** — C language servers report `typedef`s as the *Class* kind
+  (`symbol-class`), so the `t` glyph maps through `symbol-class`. C has no classes,
+  so in C this is effectively the typedef icon.
+- **macros** — some C language servers report `#define` macros as the *String*
+  kind, so `symbol-string` is mapped to `#` as well (this also affects string
+  symbols in other languages, since product icon themes are global).
 
 ## Install & activate
 
@@ -65,8 +69,8 @@ npm install
 npm run build      # icons/*.svg -> theme/fonts/c-icons.woff + the theme JSON
 ```
 
-- `build/gen-badges.mjs` vectorises the lowercase letter glyphs (`f`, `v`, `s`,
-  `sf`, `e`, `ec`) from Segoe UI at a fixed x-height into `icons/*.svg`.
+- `build/gen-badges.mjs` vectorises the lowercase letter glyphs (`t`, `f`, `v`,
+  `s`, `sf`, `e`, `ec`) from Segoe UI at a fixed x-height into `icons/*.svg`.
 - `build/build-font.mjs` assigns each icon a Private-Use-Area codepoint and rebuilds
   [`theme/fonts/c-icons.woff`](theme/fonts/c-icons.woff) and
   [`theme/c-product-icon-theme.json`](theme/c-product-icon-theme.json),
